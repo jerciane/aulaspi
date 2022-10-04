@@ -3,7 +3,6 @@ package ifrn.pi.eventos.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import ifrn.pi.eventos.models.Evento;
 
 @Controller
@@ -14,7 +13,7 @@ public class EventosController {
 	}
 
 	@PostMapping("/eventos")
-	public String salvar (Evento evento) {
+	public String salvar(Evento evento) {
 		System.out.println(evento);
 		return "evento-add";
 	}
