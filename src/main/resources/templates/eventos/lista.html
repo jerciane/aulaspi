@@ -25,10 +25,10 @@
 			<tbody>
 				<tr th:each="e : ${eventos}">
 				<td th:text="${e.id}">1</td>
-				<td th:text="${e.nome}">Aniversário</td>
-				<td th:text="${e.local}">chimarão</td>
-				<td th:text="${e.data}">18/07/2023</td>
-				<td th:text="${e.horario}">20:00</td>
+				<td> <a th:href="@{/eventos/{id}(id=${e.id})}"> <span th:text="${e.nome}">Aniversário </span></a>></td>
+				<td th:text="${e.local}"></td>
+				<td th:text="${e.data}"></td>
+				<td th:text="${e.horario}"></td>
 				</tr>
 			</tbody>
 
