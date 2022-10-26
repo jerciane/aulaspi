@@ -5,6 +5,8 @@
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
 <title>Eventos</title>
 </head>
 <body>
@@ -57,8 +59,31 @@
 				</div>
 			</div>
 		</div>
+		<div class="row">
+			<div class="col s12">
+				<div class="card">
+					<div class="card-content">
+						<span class="card-title">Convidados:</span>
+						<table class="highlight">
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Nome</th>
+									<th>Rg</th>
+									<th>
+							<tbody>
+								<tr th:each="c : ${convidados}">
+									<td th:text="${c.id}"></td>
+									<td th:text="${c.nome}"></td>
+									<td th:text="${c.rg}"></td>
+									<td><a th:href="@{/eventos/{id}/removerC(id=${c.id})}"><i class="material-icons">delete</i> </a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-
 </body>
-
 </html>
